@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url('Imagens/Lunari/background.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: white;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Opacidade de 50% */
+    z-index: -1;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+}
+
+header h1 {
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+section {
+    padding: 20px;
+    margin-top: 40px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+section h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+section h2 {
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+}
+
+section p {
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+}
+
+section img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer h4 {
+    color: rgba(255, 255, 255, 0.047);
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#contato .links {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+#contato a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    overflow: hidden;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+#contato a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+#contato a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+#contato a:hover {
+    color: #ccc;
+}
+
+#contato a[href*="instagram.com"]::after {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+#contato a[href*="linkedin.com"]::after {
+    background-color: #0077b5; /* Cor do LinkedIn */
+}
+
+#sobreMim {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+#sobreMim h1 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+#sobreMim p {
+    color: white;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+#projetos h1 {
+    font-size: 36px; /* Tamanho aumentado */
+    font-weight: 600;
+    text-align: center;
+}
+
+header h1 {
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    padding: 5px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+header h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+header h1:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+header h1:hover {
+    color: #ccc;
+}
+
+.experiencia {
+    font-size: 18px; 
+    text-align: center;
+    margin-top: 10px;
+}
+
+#apresentacao h2 {
+    font-size: 15px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#apresentacao img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
