@@ -273,11 +273,11 @@ header h1:hover {
 }
 
 .card-back {
-    transform: rotateY(180deg) translateZ(0); /* Inicialmente, o verso da carta está virado */
+    transform: rotateY(180deg) translateZ(0);
 }
 
 .card img {
-    width: 100%; /* Ocupa 100% do espaço do card */
+    width: 100%;
     height: 100%; /* Ocupa 100% da altura do card */
     border-radius: 8px;
     object-fit: cover; /* Garante que a imagem cubra todo o espaço sem distorcer */
