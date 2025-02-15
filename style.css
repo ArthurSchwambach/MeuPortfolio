@@ -93,7 +93,7 @@ footer {
 }
 
 footer h4 {
-    color: rgba(255, 255, 255, 0.047);
+    color: rgba(255, 255, 255, 0.103);
     font-size: 15px;
     font-family: 'Poppins', sans-serif;
 }
@@ -108,7 +108,7 @@ footer h4 {
 #contato .links {
     display: flex;
     gap: 20px;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 #contato a {
@@ -119,6 +119,7 @@ footer h4 {
     overflow: hidden;
     padding: 5px 10px;
     transition: color 0.3s ease;
+    margin-top: 5px;
 }
 
 #contato a::after {
@@ -231,4 +232,53 @@ header h1:hover {
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 20px;
+}
+
+.card {
+    perspective: 1000px; /* Define a perspectiva para o efeito 3D */
+    width: 100%; /* Ocupa a largura total do contêiner pai */
+    max-width: 600px; /* Mesmo tamanho das outras imagens */
+    height: 400px; /* Altura fixa para evitar sobreposição */
+    margin: 20px auto; /* Centraliza o card */
+    position: relative;
+    transform-style: preserve-3d; /* Garante que os filhos sejam renderizados em 3D */
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg); /* Gira a carta 180 graus ao passar o mouse */
+}
+
+.card-front, .card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Esconde o verso da carta */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: translateZ(0); /* Força a aceleração de hardware para evitar flickering */
+}
+
+.card-front {
+    z-index: 2; /* Garante que a frente fique acima do verso */
+}
+
+.card-back {
+    transform: rotateY(180deg) translateZ(0); /* Inicialmente, o verso da carta está virado */
+}
+
+.card img {
+    width: 100%; /* Ocupa 100% do espaço do card */
+    height: 100%; /* Ocupa 100% da altura do card */
+    border-radius: 8px;
+    object-fit: cover; /* Garante que a imagem cubra todo o espaço sem distorcer */
 }
