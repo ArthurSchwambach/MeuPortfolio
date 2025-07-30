@@ -513,3 +513,31 @@ footer {
 .image-fade-wrapper:hover img {
     transform: scale(1.05); 
 }
+
+/* --- Estilos do Botão de Currículo --- */
+.resume-button-container {
+    margin-top: 3rem;
+}
+
+
+/* --- Estilos do Leitor de Currículo --- */
+.lightbox-content-curriculo {
+  position: relative;
+  width: 90%;
+  max-width: 900px;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#curriculo-iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.lightbox-content-curriculo .close-button {
+    top: -15px;
+    right: -15px;
+}

@@ -5,8 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
   window.openTab = function(evt, tabName) {
     const tabContents = document.querySelectorAll('.tab-content');
     const tabButtons = document.querySelectorAll('.tab-button');
-    const designNotification = document.getElementById('design-notification');
-
+    
     tabContents.forEach(content => {
       content.classList.remove('active');
     });
@@ -17,41 +16,27 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.getElementById(tabName).classList.add('active');
     evt.currentTarget.classList.add('active');
-
-    // Mostra ou esconde a notificação com base na aba clicada
-    if (tabName === 'design') {
-        // Esta lógica estava faltando na sua versão
-        // designNotification.style.display = 'block'; 
-    } else {
-        // designNotification.style.display = 'none';
-    }
   }
 
-  // Garante que a primeira aba esteja visível ao carregar
   const firstTabButton = document.querySelector('.tab-button');
   if (firstTabButton) {
     firstTabButton.click();
   }
 
-
   // --- LÓGICA PARA O EFEITO DE FADE SUAVE NAS IMAGENS ---
-  // Este é o novo código para o hover suave
   document.querySelectorAll('.image-fade-wrapper').forEach(wrapper => {
     const img = wrapper.querySelector('img');
     const hoverSrc = img.getAttribute('data-hover');
-
     if (hoverSrc) {
-      // Define a imagem de hover como uma variável CSS (--hover-image) no wrapper
       wrapper.style.setProperty('--hover-image', `url(${hoverSrc})`);
     }
   });
-
 
   // --- LÓGICA DO LIGHTBOX DE VÍDEO ---
   const videoLightbox = document.getElementById('video-lightbox');
   const lightboxIframe = document.getElementById('lightbox-iframe');
   const videoTriggers = document.querySelectorAll('.video-trigger');
-  const videoCloseButton = videoLightbox.querySelector('.close-button'); // Botão específico do vídeo
+  const videoCloseButton = videoLightbox.querySelector('.close-button');
 
   const openVideoLightbox = (src) => {
     lightboxIframe.src = src + "?autoplay=1&rel=0";
@@ -77,21 +62,17 @@ document.addEventListener('DOMContentLoaded', function() {
     videoCloseButton.addEventListener('click', closeVideoLightbox);
   }
 
-  if (videoLightbox) {
-    videoLightbox.addEventListener('click', function(e) {
-      if (e.target === videoLightbox) {
-        closeVideoLightbox();
-      }
-    });
-  }
-
+  videoLightbox.addEventListener('click', function(e) {
+    if (e.target === videoLightbox) {
+      closeVideoLightbox();
+    }
+  });
 
   // --- LÓGICA DO LIGHTBOX DE IMAGEM ---
-  // Movido para dentro do DOMContentLoaded
   const imageLightbox = document.getElementById('image-lightbox');
   const lightboxImg = document.getElementById('lightbox-img');
   const imageTriggers = document.querySelectorAll('.project-card img[data-img-src]');
-  const imageCloseButton = imageLightbox.querySelector('.close-button'); // Botão específico da imagem
+  const imageCloseButton = imageLightbox.querySelector('.close-button');
 
   const openImageLightbox = (src) => {
     lightboxImg.src = src;
@@ -116,16 +97,49 @@ document.addEventListener('DOMContentLoaded', function() {
     imageCloseButton.addEventListener('click', closeImageLightbox);
   }
 
-  if (imageLightbox) {
-    imageLightbox.addEventListener('click', (e) => {
-      if (e.target === imageLightbox) {
-        closeImageLightbox();
-      }
+  imageLightbox.addEventListener('click', (e) => {
+    if (e.target === imageLightbox) {
+      closeImageLightbox();
+    }
+  });
+
+  // --- LÓGICA DO LEITOR DE CURRÍCULO ---
+  const curriculoLightbox = document.getElementById('curriculo-lightbox');
+  const curriculoBtn = document.getElementById('ver-curriculo-btn');
+  const curriculoIframe = document.getElementById('curriculo-iframe');
+  const curriculoCloseButton = curriculoLightbox.querySelector('.close-button');
+
+  const openCurriculoLightbox = () => {
+    curriculoIframe.src = 'curriculo.pdf'; 
+    curriculoLightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeCurriculoLightbox = () => {
+    curriculoLightbox.classList.remove('active');
+    curriculoIframe.src = "";
+    document.body.style.overflow = 'auto';
+  };
+
+  if (curriculoBtn) {
+    curriculoBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      openCurriculoLightbox();
     });
   }
 
+  if (curriculoCloseButton) {
+    curriculoCloseButton.addEventListener('click', closeCurriculoLightbox);
+  }
 
-  // --- LÓGICA DA TECLA 'ESCAPE' PARA FECHAR AMBOS LIGHTBOXES ---
+  curriculoLightbox.addEventListener('click', (e) => {
+    if (e.target === curriculoLightbox) {
+      closeCurriculoLightbox();
+    }
+  });
+
+
+  // --- LÓGICA DA TECLA 'ESCAPE' (ATUALIZADA) ---
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') {
       if (videoLightbox.classList.contains('active')) {
@@ -133,6 +147,9 @@ document.addEventListener('DOMContentLoaded', function() {
       }
       if (imageLightbox.classList.contains('active')) {
         closeImageLightbox();
+      }
+      if (curriculoLightbox.classList.contains('active')) {
+        closeCurriculoLightbox();
       }
     }
   });
