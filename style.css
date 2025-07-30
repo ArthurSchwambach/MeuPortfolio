@@ -541,3 +541,285 @@ footer {
     top: -15px;
     right: -15px;
 }
+
+/* ============================================= */
+/* MEDIA QUERIES PARA DISPOSITIVOS MÓVEIS */
+/* ============================================= */
+
+@media (max-width: 767px) {
+  /* Ajustes gerais */
+  body {
+    font-size: 14px;
+  }
+  
+  .header-container, .main-container {
+    padding: 0 1rem;
+  }
+  
+  /* Cabeçalho */
+  .header-container {
+    height: 60px;
+  }
+  
+  .logo a {
+    font-size: 1.2rem;
+  }
+  
+  /* Menu de navegação - transformar em menu hamburguer */
+  nav {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: var(--bg-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem;
+    transform: translateY(-150%);
+    transition: transform 0.3s ease;
+    z-index: 999;
+  }
+  
+  nav.active {
+    transform: translateY(0);
+  }
+  
+  nav a {
+    display: block;
+    margin: 1rem 0;
+    padding: 0.5rem;
+  }
+  
+  .header-right {
+    gap: 1rem;
+  }
+  
+  .social-icons {
+    display: none; /* Oculta ícones sociais em mobile */
+  }
+  
+  .btn-connect {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+  
+  /* Menu Hambúrguer */
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    cursor: pointer;
+  }
+  
+  .menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-text);
+    transition: all 0.3s ease;
+  }
+  
+  .menu-toggle.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-toggle.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  
+  /* Seção Hero */
+  .hero {
+    flex-direction: column;
+    padding: 2rem 0;
+    text-align: center;
+    gap: 2rem;
+  }
+  
+  .hero-text {
+    max-width: 100%;
+    order: 2;
+  }
+  
+  .hero-text h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero-text .subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-image {
+    max-width: 70%;
+    order: 1;
+  }
+  
+  .hero-image img {
+    width: 250px;
+    height: 250px;
+  }
+  
+  /* Seções */
+  section {
+    padding: 3rem 0;
+  }
+  
+  section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Abas */
+  .tabs {
+    flex-direction: column;
+    width: 90%;
+    padding: 0.3rem;
+  }
+  
+  .tab-button {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Cards */
+  .tab-content {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .project-card, .content-card, .skills-card {
+    padding: 1rem;
+  }
+  
+  .project-card img, .video-trigger img {
+    height: 150px;
+  }
+  
+  /* Habilidades */
+  #habilidades .skills-card {
+    flex: 1 1 100%;
+  }
+  
+  /* Lightbox */
+  .lightbox-content {
+    width: 95%;
+  }
+  
+  .lightbox-image-wrapper img {
+    width: 95vw;
+  }
+  
+  .close-button {
+    right: 10px;
+    top: 10px;
+    font-size: 1.5rem;
+  }
+  
+  /* Contato */
+  .contact-links {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Espaçamento específico para habilidades */
+  #habilidades-container h2 {
+    padding-top: 100px;
+  }
+  
+  /* Ajustes específicos para Samsung S20 FE */
+  @media (max-width: 375px) {
+    .hero-text h1 {
+      font-size: 1.8rem;
+    }
+    
+    .hero-image img {
+      width: 200px;
+      height: 200px;
+    }
+    
+    section h2 {
+      font-size: 1.6rem;
+    }
+    
+    .btn-main {
+      padding: 0.7rem 1.2rem;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+/* ============================================= */
+/* AJUSTES PARA TABLETS (768px - 1024px) */
+/* ============================================= */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .hero-text {
+    max-width: 50%;
+  }
+  
+  .hero-image {
+    max-width: 45%;
+  }
+  
+  .hero-image img {
+    width: 350px;
+    height: 350px;
+  }
+  
+  .tab-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Mostrar menu normal em tablets */
+  .menu-toggle {
+    display: none;
+  }
+  
+  nav {
+    display: block;
+    position: static;
+    width: auto;
+    background-color: transparent;
+    border-bottom: none;
+    padding: 0;
+    transform: none;
+  }
+  
+  nav a {
+    display: inline-block;
+    margin: 0 0.8rem;
+  }
+}
+
+/* ============================================= */
+/* ESTILOS ADICIONAIS PARA MOBILE */
+/* ============================================= */
+
+/* Melhorar acessibilidade em touch */
+button, a, .tab-button, .project-card {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Aumentar área de toque para botões */
+.btn-main, .btn-connect, .tab-button {
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Evitar zoom em inputs */
+input, select, textarea {
+  font-size: 16px;
+}
+
+/* Suavizar rolagem em iOS */
+html {
+  -webkit-overflow-scrolling: touch;
+}
