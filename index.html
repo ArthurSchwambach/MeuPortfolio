@@ -1,302 +1,349 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfólio - Arthur da Silva Schwambach</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio - Arthur Schwambach</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <script async src="https://www.tiktok.com/embed.js"></script>
-
-</head>
-
-<body>
-    <header id="header">
-        <a href="#abas-projetos">
-            <h1>Projetos</h1>
-        </a>
-        <h1>|</h1>
-        <a href="#sobreMim">
-            <h1>Sobre Mim</h1>
-        </a>
-        <h1>|</h1>
-        <a href="#contato">
-            <h1>Contato</h1>
-        </a>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo">
+          <a href="#">Arthur S.</a>
+        </div>
+        <nav>
+          <a href="#home">Home</a>
+          <a href="#projetos">Projetos</a>
+          <a href="#sobreMim">Sobre</a>
+          <a href="#contato">Contato</a>
+        </nav>
+        <div class="header-right">
+          <div class="social-icons">
+            <a
+              href="https://www.linkedin.com/in/arthur-da-silva-schwambach-422a81289/"
+              target="_blank"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a href="https://github.com/ArthurSchwambach" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+          </div>
+          <a href="#contato" class="btn-connect">Conectar</a>
+        </div>
+      </div>
     </header>
 
-    <section id="apresentacao">
-        <img src="Imagens/Fotografia.jpg" alt="Foto de Arthur">
-        <h1>Arthur Schwambach</h1>
-        <h2 class="experiencia">Experiência em Criação de Jogos</h2>
-        <h2 class="experiencia">Experiência em Roteirização</h2>
-        <h2 class="experiencia">Experiência em Web Design | UX e UI</h2>
-    </section>
+    <div class="main-container">
+      <main>
+        <section id="home" class="hero">
+          <div class="hero-text">
+            <h1>Arthur da Silva Schwambach</h1>
+            <p class="subtitle">
+              Estudante de Ciência da Computação apaixonado por inovação e
+              tecnologia. Transformo ideias em experiências visuais e
+              interativas, com prática em design, front-end e edição de vídeo.
+            </p>
+            <a href="#projetos" class="btn-main"
+              >Ver Projetos <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+          <div class="hero-image">
+            <img src="Imagens/Fotografia.jpg" alt="Foto de Arthur Schwambach" />
+          </div>
+        </section>
 
-    <section id="abas-projetos">
-        <div class="tabs">
-            <button class="tab-button active" onclick="openTab('jogos')">Jogos</button>
-            <button class="tab-button" onclick="openTab('ux-ui')">Projetos UX/UI</button>
-            <button class="tab-button" onclick="openTab('producoes')">Criação de Conteúdo</button>
-        </div>
+        <section id="projetos">
+          <h2>Projetos</h2>
 
-        <div id="jogos" class="tab-content active-tab">
-            <h1>Criação de Jogos</h1>
-            <article>
-                <h2>Lunari</h2>
-                <a href="https://artiestudios.itch.io/lunari" target="_blank" class="card-link">
-                    <div class="card">
-                        <div class="card-inner">
-                            <div class="card-front">
-                                <img src="Imagens/Lunari/Lunari.png" alt="Frente do jogo Lunari">
-                            </div>
-                            <div class="card-back">
-                                <img src="Imagens/Lunari/cidade.png" alt="Verso do jogo Lunari">
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <p style="padding-top: 20px;">
-                    <strong>Lunari</strong> é um jogo de suspense desenvolvido no motor RPG Maker.
-                </p>
-                <p>
-                    Na pele de Naomi, uma cientista, o jogador precisa para desvendar os mistérios que assolam a nave
-                    Lunari.
-                </p>
-                <p>
-                    Este é o meu mais recente jogo lançado no RPG Maker. Se tornou um dos meus projetos favoritos.
-                    Lançado no final de 2024, <strong>Lunari</strong> explora temas que sempre gostei, como futurismo,
-                    amor, música e superação.
-                </p>
-                <p>
-                    <strong>Mais sobre Lunari:</strong>
-                </p>
-                <p>
-                    <a style="color: rgb(215, 156, 255);" href="https://artiestudios.itch.io/lunari"
-                        target="_blank">Site Oficial</a> |
-                    <a style="color: rgb(215, 156, 255);" href="https://condadobraveheart.com/threads/lunari.8322/"
-                        target="_blank">Review de Lunari</a> |
-                    <a style="color: rgb(215, 156, 255);"
-                        href="https://www.estudiocafegamer.com/post/lunari-uma-introspec%C3%A7%C3%A3o-claustrof%C3%B3bica"
-                        target="_blank">Análise sobre Lunari</a>
-                </p>
-                <p>
-                    <a style="color: rgb(173, 255, 177);" href="https://arthurschwambach.github.io/LunariNavegador/"
-                        target="_blank">Jogue Lunari diretamente no navegador</a>
-                </p>
+          <div class="tabs">
+            <button class="tab-button active" onclick="openTab(event, 'jogos')">
+              Jogos
+            </button>
+            <button class="tab-button" onclick="openTab(event, 'ux-ui')">
+              UX/UI
+            </button>
+            <button class="tab-button" onclick="openTab(event, 'producoes')">
+              Conteúdo Audiovisual
+            </button>
+            <button class="tab-button" onclick="openTab(event, 'habilidades')">
+              Habilidades
+            </button>
+          </div>
+
+          <div id="jogos" class="tab-content">
+            <div class="project-card">
+              <img src="Imagens/Lunari/Lunari.png" alt="Jogo Lunari" />
+              <h3>Lunari (2024)</h3>
+              <p>
+                Jogo narrativo de suspense desenvolvido com RPG Maker MV, com
+                roteiro, level design, músicas e mecânicas integradas.
+              </p>
+              <a
+                href="https://artiestudios.itch.io/lunari"
+                target="_blank"
+                class="card-link"
+                >Ver na Itch.io</a
+              >
+            </div>
+            <div class="project-card">
+              <img
+                src="Imagens/Arconomicon/Arconomicon.png"
+                alt="Jogo Arconomicon"
+              />
+              <h3>Arconomicon (2023)</h3>
+              <p>
+                Jogo de tabuleiro e estratégia baseado em cartas e dados, com
+                design gráfico, narrativa e mecânicas originais.
+              </p>
+            </div>
+            <div class="project-card">
+              <img src="Imagens/Somnia/Somnia.png" alt="Jogo Somnia" />
+              <h3>Somnia: Onyrium</h3>
+              <p>
+                Remake de um jogo de suspense premiado, focado na narrativa e
+                resolução de enigmas para desvendar um mistério familiar.
+              </p>
+              <a
+                href="https://artiestudios.itch.io/somnia"
+                target="_blank"
+                class="card-link"
+                >Ver na Itch.io</a
+              >
+            </div>
+          </div>
+
+          <div id="ux-ui" class="tab-content">
+            <div class="project-card">
+              <img src="Imagens/EasyHair.png" alt="Projeto Easy Hair" />
+              <h3>Easy Hair (2024)</h3>
+              <p>
+                Plataforma de agendamento com desenvolvimento front-end de um
+                site responsivo e interface intuitiva com foco em acessibilidade
+                e usabilidade.
+              </p>
+              <a
+                href="https://www.figma.com/design/il8sj51A4wYhgXovspGeEg/Prot%C3%B3tipo?node-id=0-1"
+                target="_blank"
+                class="card-link"
+                >Ver no Figma</a
+              >
+            </div>
+            <div class="project-card">
+              <img src="Imagens/FoodCycle.png" alt="Projeto FoodCycle" />
+              <h3>FoodCycle - Spassu</h3>
+              <p>
+                Protótipo de site para redução de desperdício de alimentos,
+                criado durante o desafio de inovação InovaApps da UVV.
+              </p>
+              <a
+                href="https://www.figma.com/design/mrilDauVKz2xnXR2Qf2K7n/Telas---Spassus?node-id=2-1019"
+                target="_blank"
+                class="card-link"
+                >Ver no Figma</a
+              >
+            </div>
+          </div>
+
+          <div id="producoes" class="tab-content">
+            <article class="content-card">
+              <a
+                href="#"
+                class="video-trigger"
+                data-video-src="https://www.youtube.com/embed/MkgHWWuhggw?si=w85GDXvgPYJvsEkB"
+              >
+                <img
+                  src="https://i.ytimg.com/vi/MkgHWWuhggw/maxresdefault.jpg"
+                  alt="Thumbnail do vídeo Bruxa Emellyn"
+                />
+                <div class="play-icon"><i class="fas fa-play"></i></div>
+              </a>
+              <h3>Bruxa Emellyn - Canal no Youtube</h3>
+              <p>
+                Produção de conteúdo narrativo para RPG de Mesa, com edição de
+                áudio, vídeo, storytelling e design visual de personagens.
+              </p>
+              <a
+                href="https://www.youtube.com/@BruxaEmellyn"
+                target="_blank"
+                class="card-link"
+                >Ver Canal no Youtube</a
+              >
+            </article>
+            <article class="content-card">
+              <a
+                href="#"
+                class="video-trigger"
+                data-video-src="https://www.youtube.com/embed/MtBZIxvDg40?si=QuBSn6oE6c4UPb6o"
+              >
+                <img
+                  src="https://i.ytimg.com/vi/k4Ok0k-i3oQ/maxresdefault.jpg"
+                  alt="Thumbnail do vídeo ArtieMaps"
+                />
+                <div class="play-icon"><i class="fas fa-play"></i></div>
+              </a>
+              <h3>ArtieMaps - Canal no Youtube</h3>
+              <p>
+                Criação de mapas digitais para jogos, com produção de vídeos
+                focados em imersão e ambientação.
+              </p>
+              <a
+                href="https://www.youtube.com/@artiemaps"
+                target="_blank"
+                style="text-decoration: none; color: var(--accent-blue)"
+                class="card-link"
+                >Ver Canal no Youtube</a
+              >
             </article>
 
-
-            <article>
-                <h2>Arconomicon</h2>
-                <div class="card">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <img src="Imagens/Arconomicon/Arconomicon.png" alt="Frente do jogo Arconomicon">
-                        </div>
-                        <div class="card-back">
-                            <img src="Imagens/Arconomicon/Arconomicon-Jogo.png" alt="Verso do jogo Arconomicon">
-                        </div>
-                    </div>
-                </div>
-                <p style="padding-top: 20px;">Arconomicon é um jogo de tabuleiro criado para a disciplina de Design de
-                    Games.</p>
-                <p>Os jogadores assumem o papel de magos que buscam o lendário Arconomicon.</p>
-                <p>Fui o responsável pela criação das peças, do logotipo, do mapa (tabuleiro), desenvolvimento das
-                    mecânicas de cartas (personagens, itens, inimigos, armadilhas e magias), história e ambientação do
-                    jogo.</p>
-                <p>Atualmente, o jogo está sendo remontado, <a style="color: rgb(215, 156, 255);"
-                        href="https://redroselilith.github.io/portfolio/">em equipe</a>, para ser nossa apresentação de
-                    TCC.</p>
+            <article class="content-card">
+              <a
+                href="#"
+                class="video-trigger"
+                data-video-src="https://www.youtube.com/embed/LpN_MxVfpPA?si=s1nUeQ-sVQnpY2YB"
+              >
+                <img
+                  src="https://i.ytimg.com/vi/LpN_MxVfpPA/maxresdefault.jpg"
+                  alt="Thumbnail do vídeo Vilão"
+                />
+                <div class="play-icon"><i class="fas fa-play"></i></div>
+              </a>
+              <h3>RPG de Mesa: Ponto de Vista do Vilão</h3>
+              <p>
+                Cena imersiva mostrando o ponto de vista do vilão da campanha
+                para reforçar sua presença na história.
+              </p>
+              <a
+                href="https://youtu.be/LpN_MxVfpPA?si=s1nUeQ-sVQnpY2YB"
+                target="_blank"
+                class="card-link"
+                >Ver no YouTube</a
+              >
             </article>
 
-            <article>
-                <h2>Somnia: Onyrium</h2>
-                <a href="https://artiestudios.itch.io/somnia" target="_blank" class="card-link">
-                    <div class="card">
-                        <div class="card-inner">
-                            <div class="card-front">
-                                <img src="Imagens/Somnia/Somnia.png" alt="Frente do jogo Somnia">
-                            </div>
-                            <div class="card-back">
-                                <img src="Imagens/Somnia/SomniaTras.png" alt="Verso do jogo Somnia">
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <p style="padding-top: 20px;">Somnia: Onyrium é um jogo de suspense em que interpretamos Aela, uma
-                    garota de olhos roxos que busca encontrar o motivo do desaparecimento de sua família.</p>
-                <p>O jogo foi feito no motor RPG Maker MV, contando com alguns enigmas para o jogador resolver.</p>
-                <p>O jogo é o remake do meu primeiro jogo, chamado Somnia. O projeto ao qual recebeu "Melhor Narrativa"
-                    no evento de RPG Maker <a style="color: rgb(215, 156, 255);"
-                        href="https://condadobraveheart.com/threads/premio-indiestar-do-solon-barcelos.7525/">Prêmio
-                        Indiestar</a>.</p>
-                <p><a style="color: rgb(215, 156, 255);" href="https://artiestudios.itch.io/somnia" target="_blank">Site
-                        do Jogo.</a></p>
+            <article class="content-card">
+              <a
+                href="#"
+                class="video-trigger"
+                data-video-src="https://www.youtube.com/embed/gZwHLYBDS70"
+              >
+                <img
+                  src="https://i.ytimg.com/vi/gZwHLYBDS70/maxresdefault.jpg"
+                  alt="Thumbnail do vídeo Comercial Night Springs"
+                />
+                <div class="play-icon"><i class="fas fa-play"></i></div>
+              </a>
+              <h3>Vídeo Temático: Comercial Night Springs</h3>
+              <p>
+                Comercial fictício para um local assombrado da campanha, criado
+                para gerar imersão na história.
+              </p>
+              <a
+                href="https://www.youtube.com/watch?v=gZwHLYBDS70"
+                target="_blank"
+                class="card-link"
+                >Ver no YouTube</a
+              >
             </article>
+          </div>
 
+          <div id="habilidades" class="tab-content">
+            <div class="skills-card">
+              <h3>Avançado</h3>
+              <ul>
+                <li>Desenvolvimento Web: HTML, CSS, JavaScript (Front-end)</li>
+                <li>UX/UI Design: Figma, Adobe XD, Balsamiq</li>
+                <li>
+                  Edição de Vídeo: Adobe Premiere, DaVinci Resolve, Filmora,
+                  CapCut
+                </li>
+                <li>Edição e Masterização de Áudio</li>
+                <li>Criação de jogos: RPG Maker, GameMaker, Roblox</li>
+                <li>Roteirização de jogos digitais e analógicos</li>
+                <li>Metodologias Ágeis: Scrum, Kanban</li>
+              </ul>
+            </div>
+            <div class="skills-card">
+              <h3>Básico / Intermediário</h3>
+              <ul>
+                <li>Linguagens: Java, C, C++</li>
+                <li>Banco de Dados: MySQL, SQL</li>
+                <li>Power Platform: Power Apps, Power BI, Microsoft Forms</li>
+                <li>RPA (Automatização de Processos Robóticos)</li>
+                <li>Engenharia de Software e Padrões de Projeto</li>
+                <li>Marketing Digital</li>
+              </ul>
+            </div>
+          </div>
+        </section>
 
-        </div>
+        <section id="sobreMim">
+          <h2>Sobre Mim</h2>
+          <p>
+            Atualmente cursando Bacharelado em Ciência da Computação na
+            Universidade Vila Velha (UVV) desde 2023. Minha jornada é marcada
+            pelo desenvolvimento de projetos acadêmicos e pessoais e pela
+            participação em hackathons e iniciativas criativas. Além do
+            português nativo, possuo inglês intermediário e estou sempre
+            buscando expandir meus conhecimentos, como no curso CS50x de
+            Harvard.
+          </p>
+        </section>
 
-        <div id="ux-ui" class="tab-content">
-            <h1>Projetos de UX/UI Design</h1>
-
-            <article class="ux-ui-card">
-                <h2>EasyHair</h2>
-                <p>Protótipo de aplicativo para salões e barbearias.</p>
-                <img src="Imagens/EasyHair.png" alt="Projeto App Design">
-                <p>Desenvolvimento de design de interface para um aplicativo mobile.</p>
-                <p>O protótipo foi criado com o objetivo de facilitar o gerenciamento de agendamentos em barbearias,
-                    permitindo que os estabelecimentos se cadastrem e disponibilizem horários para que os clientes
-                    possam agendar seus atendimentos de forma prática e rápida.</p>
-                <p><strong>Tecnologias utilizadas:</strong> Figma (protótipo de alta fidelidade), Notion (planejamento
-                    do projeto) e Astah (diagramação de classes).</p>
-
-                <p style="padding-top: 25px;">O protótipo pode ser visto por completo clicando <a
-                        style="color: rgb(215, 156, 255);"
-                        href="https://www.figma.com/design/il8sj51A4wYhgXovspGeEg/Prot%C3%B3tipo?node-id=0-1&t=OM4s1tjlx0EdRlKH-1"
-                        target="_blank">aqui</a>!</p>
-
-            </article>
-
-            <article class="ux-ui-card">
-                <h2>FoodCycle - Spassu Tecnologia</h2>
-                <p>Protótipo de aplicativo focado na redução de desperdício de alimentos.</p>
-
-                <img src="Imagens/FoodCycle.png" alt="Projeto Web Design">
-                <p>Participei do desenvolvimento de um protótipo de site durante o evento <a
-                        style="color: rgb(215, 156, 255);"
-                        href="https://uvv.br/wp-content/uploads/2024/09/20240917-20240829-edital-15-2024-inovaapps.pdf">InovaApps</a>,
-                    um desafio de inovação com duração de 15 horas.</p>
-                <p>O projeto consistiu na criação de um site fictício para uma empresa, permitindo que instituições
-                    pudessem sinalizar a disponibilidade de alimentos excedentes, facilitando a redistribuição para
-                    outras organizações necessitadas.</p>
-                <p><strong>Tecnologias utilizadas:</strong> Figma (protótipo de alta fidelidade), Notion (Roteirização
-                    do Projeto) e Astah (diagramação de classes).</p>
-
-                <p style="padding-top: 25px;">O protótipo pode ser visto por completo clicando <a
-                        style="color: rgb(215, 156, 255);"
-                        href="https://www.figma.com/design/mrilDauVKz2xnXR2Qf2K7n/Telas---Spassus?node-id=2-1019&t=IBqtVFCH5h4kMDSz-1"
-                        target="_blank">aqui</a>!</p>
-
-            </article>
-
-        </div>
-
-        <div id="producoes" class="tab-content">
-            <h1>Criação de Conteúdo</h1>
-
-            <article class="producao-card">
-                <h2>ArtieMaps - Canal no Youtube</h2>
-                <p>Meu canal no YouTube dedicado ao mapeamento parallax para jogos desenvolvidos no RPG Maker.</p>
-                <p>Embora ainda conte com apenas 8 vídeos, o canal já ultrapassou 5 mil visualizações, com feedbacks
-                    bastante positivos da comunidade.</p>
-                <div class="video-container">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/MtBZIxvDg40" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <p><a style="color: rgb(215, 156, 255);" href="https://www.youtube.com/@artiemaps"
-                            target="_blank">Acesse o canal - ArtieMaps</a></p>
-
-            </article>
-
-            <article class="producao-card">
-                <h2>Bruxa Emellyn - Canal no Youtube</h2>
-                <p>Canal no YouTube focado em conteúdo sobre RPG de Mesa, narrativas interativas e personagens autorais.
-                </p>
-                <p>Apesar de recente, o canal já alcançou mais de 2 mil visualizações.</p>
-
-                <div class="video-container">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/MkgHWWuhggw?si=ds-zCXehm1LKgf00" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                <p><a style="color: rgb(215, 156, 255);" href="https://www.youtube.com/@BruxaEmellyn"
-                            target="_blank">Acesse o canal - Bruxa Emellyn</a></p>
-
-            </article>
-
-
-            <article class="producao-card">
-                <h2>Vídeos de RPG de Mesa</h2>
-                <p>Crio vídeos temáticos para meus amigos, com o objetivo de aumentar a imersão durante nossas sessões
-                    de RPG de Mesa.</p>
-                <p>Este vídeo em especial apresenta o Acampamento Night Springs, um local assombrado dentro da campanha.
-                </p>
-                <p>Ele foi feito no estilo de um comercial fictício, como se estivesse promovendo o próprio acampamento
-                    da história.</p>
-
-                <div class="video-container">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/gZwHLYBDS70?si=e3ZJib0aKDqqc8uF"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                <hr>
-                <p style="padding-top: 25px;">
-                    Já este vídeo foi criado como uma forma de imersão ao final de um capítulo da nossa campanha. Ele
-                    mostra o ponto de vista do vilão da história, o mesmo que havia interagido com os jogadores durante
-                    a sessão.</p>
-
-                <p>Foi uma maneira de reforçar a presença dele sem mostrar tudo de forma explícita.</p>
-                <div class="video-container">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/LpN_MxVfpPA?si=4YWqYRHIvAM5UFH8"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                </article>
-
-                <article class="producao-card">
-                    <h2>TikTok - Bruxa Emellyn</h2>
-                    <p>Versão do canal voltada para o TikTok, com foco em vídeos curtos sobre os vídeos do canal do
-                        Youtube.
-                    </p>
-                    <div class="video-container">
-                        <blockquote class="tiktok-embed"
-                            cite="https://www.tiktok.com/@bruxaemellyn/video/7525889093654383877"
-                            data-video-id="7525889093654383877" style="max-width: 605px;min-width: 325px;">
-                            <section> </section>
-                        </blockquote>
-                        <script async src="https://www.tiktok.com/embed.js"></script>
-                    </div>
-                    <p><a style="color: rgb(215, 156, 255);" href="https://www.tiktok.com/@bruxaemellyn"
-                            target="_blank">Link para o TikTok</a></p>
-                </article>
-        </div>
-
-    </section>
-
-    <section id="sobreMim">
-        <h1>Sobre Mim</h1>
-        <p>Olá! Eu sou o Arthur.</p>
-        <p style="text-align: justify;">Sempre tive contato com a tecnologia, o que me levou a escolher o curso de
-            Ciência da Computação. Desde jovem, sou apaixonado por criar e desenvolver coisas novas. Meu primeiro
-            contato com o desenvolvimento de jogos foi com o RPG Maker, e foi com ele que lancei meu primeiro jogo, que
-            acabou ganhando o prêmio de "Melhor Narrativa" em um evento.</p>
-        <p style="text-align: justify;">Após essa experiência, comecei a me aventurar no desenvolvimento de protótipos
-            para a web, utilizando o Figma. Através da faculdade, aprendi sobre UX e UI, e desde então venho aplicando
-            esses conhecimentos nos meus projetos, buscando sempre aprimorar minhas habilidades na área.</p>
-        <p style="text-align: justify;">Além do desenvolvimento, também me dedico à escrita. A criação de mundos e
-            histórias é uma das minhas grandes paixões.</p>
-        <p style="text-align: justify;">Tenho experiência com algumas linguagens de programação, graças ao andar da
-            minha formação. Gosto de aprender de forma prática.</p>
-    </section>
-
-    <section id="contato">
-        <h1>Contato</h1>
-        <div class="links">
-            <a href="https://www.instagram.com/art.schw/" target="_blank">Instagram</a>
-            <a href="https://www.linkedin.com/in/arthur-da-silva-schwambach-422a81289/" target="_blank">LinkedIn</a>
-        </div>
-        <p>Email: arthur.s.schwambach@gmail.com</p>
-    </section>
+        <section id="contato">
+          <h2>Vamos nos Conectar</h2>
+          <p>
+            Estou aberto a novas oportunidades e colaborações. Entre em contato
+            através do email ou das redes sociais.
+          </p>
+          <p><strong>Email:</strong> arthur.s.schwambach@gmail.com</p>
+          <p><strong>Telefone:</strong> (27) 99756-3197</p>
+          <div class="contact-links">
+            <a
+              href="https://www.linkedin.com/in/arthur-da-silva-schwambach-422a81289/"
+              target="_blank"
+              class="btn-main"
+              >LinkedIn</a
+            >
+            <a
+              href="https://github.com/ArthurSchwambach"
+              target="_blank"
+              class="btn-main"
+              >GitHub</a
+            >
+          </div>
+        </section>
+      </main>
+    </div>
 
     <footer>
-        <h4>Desenvolvido por Arthur Schwambach</h4>
+      <p>© 2025 - Desenvolvido por Arthur Schwambach</p>
     </footer>
 
-    <script src="script.js"></script>
-</body>
+    <div id="video-lightbox" class="lightbox">
+      <div class="lightbox-content">
+        <button class="close-button">×</button>
+        <div class="lightbox-video-wrapper">
+          <iframe
+            id="lightbox-iframe"
+            src=""
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
 
+    <script src="script.js"></script>
+  </body>
 </html>
