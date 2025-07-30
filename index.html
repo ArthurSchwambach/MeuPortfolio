@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
+    <!-- ----------- Cabeçalho / Metadados ----------- -->
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfólio - Arthur da Silva Schwambach</title>
@@ -16,6 +18,7 @@
   </head>
 
   <body>
+    <!-- ----------- Cabeçalho / Navegação ----------- -->
     <header>
       <div class="header-container">
         <div class="logo">
@@ -24,7 +27,7 @@
         <nav>
           <a href="#home">Home</a>
           <a href="#projetos">Projetos</a>
-          <a href="#sobreMim">Sobre Mim</a>
+          <a href="#habilidades">Habilidades</a>
         </nav>
         <div class="header-right">
           <div class="social-icons">
@@ -33,9 +36,9 @@
               target="_blank"
               ><i class="fab fa-linkedin-in"></i
             ></a>
-            <a href="https://github.com/ArthurSchwambach" target="_blank"
-              ><i class="fab fa-github"></i
-            ></a>
+            <a href="https://www.instagram.com/art.schw/" target="_blank">
+    <i class="fab fa-instagram"></i>
+</a>
           </div>
           <a href="#contato" class="btn-connect">Contato</a>
         </div>
@@ -43,26 +46,52 @@
     </header>
 
     <div class="main-container">
+      <!-- ----------- Resumo / Seção Hero ----------- -->
       <main>
         <section id="home" class="hero">
           <div class="hero-text">
             <h1>Arthur da Silva Schwambach</h1>
             <p class="subtitle">
-              Estudante de Ciência da Computação apaixonado por inovação e
-              tecnologia. Transformo ideias em experiências visuais e
-              interativas, com prática em design, front-end e edição de vídeo.
+              Olá! Tudo bem? Eu sou o Arthur, estudante de Ciência da Computação
+              com foco em Design Front-End. Tenho experiência em desenvolvimento
+              web, UX/UI, design gráfico e produção multimídia. Desde 2019, crio
+              protótipos, sites responsivos e conteúdos visuais buscando exercer
+              a minha criatividade utilizando da edição de vídeo, áudio, imagens
+              e roteirização. Gosto de transformar minhas ideias em experiências
+              imersivas!
             </p>
+
             <a href="#projetos" class="btn-main"
               >Ver Projetos <i class="fas fa-arrow-right"></i
             ></a>
           </div>
           <div class="hero-image">
-            <img src="Imagens/Fotografia.jpg" alt="Foto de Arthur Schwambach" style="height: 25%;"/>
+            <img src="Imagens/Fotografia.jpg" alt="Foto de Arthur Schwambach" />
           </div>
         </section>
 
+        <!-- ----------- Projetos ----------- -->
         <section id="projetos">
           <h2>Projetos</h2>
+
+          <!-- ----------- Abas de Categoria ----------- -->
+          <div
+            id="design-notification"
+            style="
+              display: none;
+              background-color: var(--accent-blue);
+              color: white;
+              padding: 1rem;
+              border-radius: 5px;
+              margin-bottom: 1.5rem;
+              max-width: fit-content;
+              margin-left: auto;
+              margin-right: auto;
+              font-weight: 600;
+            "
+          >
+            Clique na imagem para expandi-la
+          </div>
 
           <div class="tabs">
             <button class="tab-button active" onclick="openTab(event, 'jogos')">
@@ -71,21 +100,29 @@
             <button class="tab-button" onclick="openTab(event, 'ux-ui')">
               UX/UI
             </button>
+            <button class="tab-button" onclick="openTab(event, 'design')">
+              Design Gráfico
+            </button>
             <button class="tab-button" onclick="openTab(event, 'producoes')">
               Conteúdo Audiovisual
             </button>
-            <button class="tab-button" onclick="openTab(event, 'habilidades')">
-              Habilidades
-            </button>
           </div>
 
+          <!-- ----------- Jogos ----------- -->
           <div id="jogos" class="tab-content">
             <div class="project-card">
-              <img src="Imagens/Lunari/Lunari.png" alt="Jogo Lunari" />
+              <div class="image-fade-wrapper">
+                <img
+                  src="Imagens/Lunari/Lunari.png"
+                  data-hover="Imagens/Lunari/cidade.png"
+                  alt="Jogo Lunari"
+                />
+              </div>
               <h3>Lunari</h3>
               <p>
-                Jogo narrativo de suspense desenvolvido com RPG Maker MV, com foco em futurismo. O
-                roteiro, level design, artes, músicas e mecânicas são próprias, criadas especialmente para o projeto.
+                Jogo narrativo de suspense desenvolvido com RPG Maker MV, com
+                foco em futurismo. O roteiro, level design, artes, músicas e
+                mecânicas são próprias, criadas especialmente para o projeto.
               </p>
               <a
                 href="https://artiestudios.itch.io/lunari"
@@ -94,12 +131,18 @@
                 >Site do Jogo</a
               >
             </div>
-            
             <div class="project-card">
-              <img src="Imagens/Somnia/Somnia.png" alt="Jogo Somnia" />
+              <div class="image-fade-wrapper">
+                <img
+                  src="Imagens/Somnia/Somnia.png"
+                  data-hover="Imagens/Somnia/SomniaTras.png"
+                  alt="Jogo Somnia"
+                />
+              </div>
               <h3>Somnia: Onyrium</h3>
               <p>
-                Jogo narrativo de suspense premiado com 'Melhor Narrativa' em uma competição de jogos (IndieStar). Focado na narrativa e
+                Jogo narrativo de suspense premiado com 'Melhor Narrativa' em
+                uma competição de jogos (IndieStar). Focado na narrativa e
                 resolução de enigmas para desvendar um mistério familiar.
               </p>
               <a
@@ -109,28 +152,31 @@
                 >Site do Jogo</a
               >
             </div>
-<div class="project-card">
-              <img
-                src="Imagens/Arconomicon/Arconomicon.png"
-                alt="Jogo Arconomicon"
-              />
+            <div class="project-card">
+              <div class="image-fade-wrapper">
+                <img
+                  src="Imagens/Arconomicon/Arconomicon.png"
+                  data-hover="Imagens/Arconomicon/Arconomicon-Jogo.png"
+                  alt="Jogo Arconomicon"
+                />
+              </div>
               <h3>Arconomicon</h3>
               <p>
                 Jogo de tabuleiro e estratégia baseado em cartas e dados, com
                 design gráfico, narrativa e mecânicas originais.
               </p>
             </div>
-
           </div>
 
+          <!-- ----------- UX/UI ----------- -->
           <div id="ux-ui" class="tab-content">
             <div class="project-card">
               <img src="Imagens/EasyHair.png" alt="Projeto Easy Hair" />
               <h3>Easy Hair (2024)</h3>
               <p>
-                Protótipo de plataforma de agendamento para salões com desenvolvimento front-end de um
-                site responsivo e interface intuitiva com foco em acessibilidade
-                e usabilidade.
+                Protótipo de plataforma de agendamento para salões com
+                desenvolvimento front-end de um site responsivo e interface
+                intuitiva com foco em acessibilidade e usabilidade.
               </p>
               <a
                 href="https://www.figma.com/design/il8sj51A4wYhgXovspGeEg/Prot%C3%B3tipo?node-id=0-1"
@@ -143,8 +189,9 @@
               <img src="Imagens/FoodCycle.png" alt="Projeto FoodCycle" />
               <h3>FoodCycle - Spassu</h3>
               <p>
-                Protótipo de site para redução de desperdício de alimentos,
-                criado durante o desafio de inovação InovaApps da UVV.
+                Protótipo de site com foco na redução de desperdício de
+                alimentos, criado durante um hackathon para a empresa
+                SpassuTecnologia.
               </p>
               <a
                 href="https://www.figma.com/design/mrilDauVKz2xnXR2Qf2K7n/Telas---Spassus?node-id=2-1019"
@@ -155,6 +202,90 @@
             </div>
           </div>
 
+          <!-- ----------- Design Gráfico ----------- -->
+          <div id="design" class="tab-content">
+            <h2>Clique na imagem para expandí-la!</h2>
+            <div class="project-card">
+              <img
+                src="Imagens/Gráfico/cidade.png"
+                data-img-src="Imagens/Gráfico/cidade.png"
+                alt="Ambientação no jogo Lunari - Cidade Aurora"
+              />
+              <h3>Ambientação da Cidade Aurora (Lunari)</h3>
+              <p>
+                Cenário criado para meu jogo Lunari, focado na criação de uma
+                cidade chamada Aurora, envoltada em uma atmosfera futurista.
+              </p>
+            </div>
+            <div class="project-card">
+              <img
+                src="Imagens/Gráfico/DiárioThomas.png"
+                data-img-src="Imagens/Gráfico/DiárioThomas.png"
+                alt="Livro para RPG de Mesa"
+              />
+              <h3>Diário (RPG de Mesa)</h3>
+              <p>
+                Design de um diário em que criei para aumentar a imersão dos
+                meus amigos em uma aventura de RPG de Mesa. O diário serviu como
+                uma pista de um enigma que eles deveriam resolver.
+              </p>
+            </div>
+            <div class="project-card">
+              <img
+                src="Imagens/Gráfico/Jornal.png"
+                data-img-src="Imagens/Gráfico/Jornal.png"
+                alt="Jornal de Imersão"
+              />
+              <h3>Jornal (RPG de Mesa)</h3>
+              <p>
+                Design de um jornal em que criei para aumentar a imersão de meus
+                amigos para uma aventura de RPG de Mesa, com notícias que são
+                ambientadas no universo da história.
+              </p>
+            </div>
+            <div class="project-card">
+              <img
+                src="Imagens/Gráfico/livroCondessa.png"
+                data-img-src="Imagens/Gráfico/livroCondessa.png"
+                alt="Livro do RPG Condessa"
+              />
+              <h3>Lenda da Condessa (Jogo Digital)</h3>
+              <p>
+                Arte de um livro para meu jogo em desenvolvimento chamado
+                "Condessa". O livro serve para deixar o jogador mais ambientado
+                enquanto explora o universo do jogo.
+              </p>
+            </div>
+            <div class="project-card">
+              <img
+                src="Imagens/Gráfico/LivroKrampus.png"
+                data-img-src="Imagens/Gráfico/LivroKrampus.png"
+                alt="Livro para RPG"
+              />
+              <h3>Lenda do Krampus (RPG de Mesa)</h3>
+              <p>
+                Design de um livro de lendas para uma aventura de RPG com tema
+                natalino, utilizado para apresentar a história aos jogadores. O
+                livro conta a lenda de Krampus, porém, alterada para a minha
+                história.
+              </p>
+            </div>
+            <div class="project-card">
+              <img
+                src="Imagens/Gráfico/Overlay.png"
+                data-img-src="Imagens/Gráfico/Overlay.png"
+                alt="Overlay Bruxa Emellyn"
+              />
+              <h3>Overlay para Vídeo (Canal do Youtube)</h3>
+              <p>
+                Overlay em que criei para as gravações do meu canal no Youtube,
+                "Bruxa Emellyn", com tema de RPG de Mesa, especificamente: "O
+                Chamado de Cthulhu".
+              </p>
+            </div>
+          </div>
+
+          <!-- ----------- Conteúdo Audiovisual ----------- -->
           <div id="producoes" class="tab-content">
             <article class="content-card">
               <a
@@ -176,7 +307,11 @@
               <a
                 href="https://www.youtube.com/@BruxaEmellyn"
                 target="_blank"
-                style="text-decoration: none; color: var(--accent-blue);font-weight: 600;"
+                style="
+                  text-decoration: none;
+                  color: var(--accent-blue);
+                  font-weight: 600;
+                "
                 class="card-link"
                 >Ver Canal no Youtube</a
               >
@@ -201,12 +336,15 @@
               <a
                 href="https://www.youtube.com/@artiemaps"
                 target="_blank"
-                style="text-decoration: none; color: var(--accent-blue);font-weight: 600;"
+                style="
+                  text-decoration: none;
+                  color: var(--accent-blue);
+                  font-weight: 600;
+                "
                 class="card-link"
                 >Ver Canal no Youtube</a
               >
             </article>
-
             <article class="content-card">
               <a
                 href="#"
@@ -221,11 +359,11 @@
               </a>
               <h3>Vídeo Tematico: Ponto de Vista do Vilão</h3>
               <p>
-                Vídeo criado para um projeto de RPG de Mesa, mostrando o ponto de vista do vilão da aventura. O vídeo foi criado para reforçar a presença do personagem na história, como se fosse um "desabafo".
+                Vídeo criado para um projeto de RPG de Mesa, mostrando o ponto
+                de vista do vilão da aventura, para reforçar a presença do
+                personagem na história.
               </p>
-              
             </article>
-
             <article class="content-card">
               <a
                 href="#"
@@ -240,26 +378,31 @@
               </a>
               <h3>Vídeo Temático: Comercial Night Springs</h3>
               <p>
-                Vídeo para criado para representar um comercial fictício para um local assombrado da aventura, criado
-                para gerar imersão na história. A ideia era fazer uma "chamada" para meus amigos.
+                Vídeo criado para representar um comercial fictício de um local
+                da aventura, para gerar imersão na história e "chamar" os
+                jogadores.
               </p>
-             
             </article>
           </div>
+        </section>
 
-          <div id="habilidades" class="tab-content">
+        <!-- ----------- Habilidades ----------- -->
+        <section id="habilidades-container">
+          <h2 style="padding-top: 10px; margin-bottom: 30px">Habilidades</h2>
+          <div id="habilidades">
             <div class="skills-card">
               <h3>Avançado</h3>
               <ul>
                 <li>Desenvolvimento Web: HTML, CSS, JavaScript (Front-end)</li>
                 <li>UX/UI Design: Figma, Adobe XD, Balsamiq</li>
+                <li>Design Gráfico: Canva, Photoshop, Illustrator</li>
                 <li>
                   Edição de Vídeo: Adobe Premiere, DaVinci Resolve, Filmora,
                   CapCut
                 </li>
                 <li>Edição e Masterização de Áudio</li>
                 <li>Criação de jogos: RPG Maker, GameMaker, Roblox</li>
-                <li>Roteirização de jogos digitais e analógicos</li>
+                <li>Roteirização de jogos digitais e físicos</li>
                 <li>Metodologias Ágeis: Scrum, Kanban</li>
               </ul>
             </div>
@@ -277,18 +420,10 @@
           </div>
         </section>
 
-        <section id="sobreMim">
-          <h2>Sobre Mim</h2>
-          <p>
-            Vazio
-          </p>
-        </section>
-
+        <!-- ----------- Contato ----------- -->
         <section id="contato">
           <h2>Contato</h2>
-          <p>
-           Esses são os meus contatos.
-          </p>
+          <p>Esses são os meus contatos!</p>
           <p><strong>Email:</strong> arthur.s.schwambach@gmail.com</p>
           <div class="contact-links">
             <a
@@ -298,20 +433,23 @@
               >LinkedIn</a
             >
             <a
-              href="https://github.com/ArthurSchwambach"
+              href="https://www.instagram.com/art.schw/"
               target="_blank"
               class="btn-main"
-              >GitHub</a
+              >Instagram</a
             >
           </div>
         </section>
       </main>
     </div>
 
+    <!-- ----------- Rodapé ----------- -->
+
     <footer>
       <p>© 2025 - Desenvolvido por Arthur Schwambach</p>
     </footer>
 
+    <!-- ----------- Lightbox de Vídeo ----------- -->
     <div id="video-lightbox" class="lightbox">
       <div class="lightbox-content">
         <button class="close-button">×</button>
@@ -327,6 +465,17 @@
       </div>
     </div>
 
+    <!-- ----------- Lightbox de Imagem ----------- -->
+    <div id="image-lightbox" class="lightbox">
+      <div class="lightbox-content">
+        <button class="close-button">×</button>
+        <div class="lightbox-image-wrapper">
+          <img id="lightbox-img" src="" alt="Imagem ampliada" />
+        </div>
+      </div>
+    </div>
+
+    <!-- ----------- Scripts ----------- -->
     <script src="script.js"></script>
   </body>
 </html>
