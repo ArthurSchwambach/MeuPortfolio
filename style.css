@@ -136,11 +136,13 @@ nav a:hover {
 
 .hero-image {
     max-width: 35%;
+    height: 80%
 }
 
 .hero-image img {
     width: 100%;
-    border-radius: 50%;
+    object-fit: cover;
+    border-radius: 20%;
     border: 3px solid var(--border-color);
 }
 
